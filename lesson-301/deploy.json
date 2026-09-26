@@ -1,0 +1,25 @@
+:quit{
+  "app_name": "devops-app",
+  "version": "1.3.0",
+  "environments": {
+    "dev": {
+      "host": "dev.example.internal",
+      "port": 8080,
+      "debug": true,
+      "replicas": 1
+    },
+    "staging": {
+      "host": "staging.example.internal",
+      "port": 8080,
+      "debug": false,
+      "replicas": 2
+    },
+    "prod": {
+      "host": "app.example.com",
+      "port": 443,
+      "debug": false,
+      "replicas": 5
+    }
+  },
+  "notify_on_failure": ["ops@example.com", "platform@example.com"]
+}
